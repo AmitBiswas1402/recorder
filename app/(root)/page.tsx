@@ -1,6 +1,11 @@
-const ScreenRecorder = () => {
+import Header from "@/components/Header"
+
+const Page = () => {
   return (
-    <div>ScreenRecorder</div>
+    <main className="wrapper page">
+      <Header title="All videos" subHeader="Public Library" />
+      <h1 className="text-2xl font-karla">Welcome</h1>
+    </main>
   )
 }
-export default ScreenRecorder
+export default Page
