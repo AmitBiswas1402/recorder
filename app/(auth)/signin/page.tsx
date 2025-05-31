@@ -73,12 +73,12 @@ const SignIn = () => {
           // }}
           >
             <Image
-              src="/assets/icons/google.svg"
+              src="/assets/icons/github.svg"
               alt="Google Icon"
-              width={22}
-              height={22}
+              width={36}
+              height={36}
             />
-            <span>Sign in with Google</span>
+            <span>Sign in with GitHub</span>
           </button>
         </section>
       </aside>
