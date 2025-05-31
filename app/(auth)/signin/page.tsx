@@ -1,7 +1,14 @@
+"use client";
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 
 const SignIn = () => {
+  const handleSignIn = async() => {
+    return await authClient.signIn.social({
+      provider: "github",
+    })
+  }
   return (
     <main className="sign-in">
       <aside className="testimonial">

@@ -4,6 +4,7 @@ import type {
   BaseClientOptions,
   SchemaInference,
 } from "@xata.io/client";
+import 'dotenv/config';
 
 const tables = [] as const;
 
@@ -15,7 +16,11 @@ export type DatabaseSchema = {};
 
 const DatabaseClient = buildClient();
 
+const apiKey = process.env.XATA_API_KEY;
+if (!apiKey) throw new Error("Missing XATA_API_KEY");
+
 const defaultOptions = {
+  apiKey,
   databaseURL:
     "https://Amit-Biswas-s-workspace-butaqg.ap-southeast-2.xata.sh/db/recorder",
 };
