@@ -1,6 +1,8 @@
-export const MAX_VIDEO_SIZE = 500 * 1024 * 1024;
-export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024;
+// 🧠 File Size Limits
+export const MAX_VIDEO_SIZE = 500 * 1024 * 1024; // 500MB
+export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024; // 10MB
 
+// 📹 BunnyCDN Configuration
 export const BUNNY = {
   STREAM_BASE_URL: "https://video.bunnycdn.com/library",
   STORAGE_BASE_URL: "https://sg.storage.bunnycdn.com/snapcast",
@@ -9,8 +11,10 @@ export const BUNNY = {
   TRANSCRIPT_URL: "https://vz-47a08e64-84d.b-cdn.net",
 };
 
+// 😀 Reactions
 export const emojis = ["😂", "😍", "👍"];
 
+// 🔍 Video Filters
 export const filterOptions = [
   "Most Viewed",
   "Most Recent",
@@ -18,14 +22,17 @@ export const filterOptions = [
   "Least Viewed",
 ];
 
+// 🔐 Visibility Settings
 export const visibilities: Visibility[] = ["public", "private"];
 
+// 🧩 Icon Paths
 export const ICONS = {
   record: "/assets/icons/record.svg",
   close: "/assets/icons/close.svg",
   upload: "/assets/icons/upload.svg",
 };
 
+// 📽️ Initial Video State
 export const initialVideoState = {
   isLoaded: false,
   hasIncrementedView: false,
@@ -33,20 +40,24 @@ export const initialVideoState = {
   processingProgress: 0,
 };
 
+// 📑 Video Info Types
 export const infos = ["transcript", "metadata"];
 
+// 📷 Recording Constraints
 export const DEFAULT_VIDEO_CONFIG = {
   width: { ideal: 1920 },
   height: { ideal: 1080 },
   frameRate: { ideal: 30 },
 };
 
+// 🎥 Recording Media Options
 export const DEFAULT_RECORDING_CONFIG = {
   mimeType: "video/webm;codecs=vp9,opus",
   audioBitsPerSecond: 128000,
   videoBitsPerSecond: 2500000,
 };
 
+// 🧪 Dummy Video Cards (for UI testing/dev preview)
 export const dummyCards = [
   {
     id: "1",
@@ -56,7 +67,7 @@ export const dummyCards = [
     userImg: "/assets/images/jason.png",
     username: "Jason",
     views: 10,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 156,
   },
   {
@@ -67,7 +78,7 @@ export const dummyCards = [
     userImg: "/assets/images/sarah.png",
     username: "Sarah",
     views: 245,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 320,
   },
   {
@@ -78,7 +89,7 @@ export const dummyCards = [
     userImg: "/assets/images/michael.png",
     username: "Michael",
     views: 78,
-    visibility: "private",
+    visibility: "private" as Visibility,
     duration: 412,
   },
   {
@@ -89,7 +100,7 @@ export const dummyCards = [
     userImg: "/assets/images/emily.png",
     username: "Emily",
     views: 32,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 183,
   },
   {
@@ -100,7 +111,7 @@ export const dummyCards = [
     userImg: "/assets/images/david.png",
     username: "David",
     views: 156,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 275,
   },
   {
@@ -111,7 +122,7 @@ export const dummyCards = [
     userImg: "/assets/images/lisa.png",
     username: "Lisa",
     views: 89,
-    visibility: "private",
+    visibility: "private" as Visibility,
     duration: 198,
   },
   {
@@ -122,7 +133,7 @@ export const dummyCards = [
     userImg: "/assets/images/alex.png",
     username: "Alex",
     views: 124,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 230,
   },
   {
@@ -133,7 +144,7 @@ export const dummyCards = [
     userImg: "/assets/images/jessica.png",
     username: "Jessica",
     views: 67,
-    visibility: "public",
+    visibility: "public" as Visibility,
     duration: 345,
-  }
+  },
 ];

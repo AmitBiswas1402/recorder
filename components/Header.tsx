@@ -1,3 +1,4 @@
+"use client"
 import { ICONS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,10 +12,10 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
           {userImg && (
             <Image
               src={userImg}
-              alt="user"
-              className="rounded-full"
-              height={66}
+              alt=""
               width={66}
+              height={66}
+              className="rounded-full"
             />
           )}
 
@@ -23,7 +24,6 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
             <h1>{title}</h1>
           </article>
         </div>
-
         <aside>
           <Link href="/upload">
             <Image
@@ -32,12 +32,12 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
               width={16}
               height={16}
             />
-            <span>Upload a Video</span>
+            <span>Upload a video</span>
           </Link>
           <div className="record">
             <button className="primary-btn">
-              <Image src={ICONS.record} alt="record" width={16} height={16} />
-              <span>Record a video</span>
+              <Image src={ICONS.record} alt="" width={16} height={16} />
+              <span>Record a Video</span>
             </button>
           </div>
         </aside>
@@ -45,11 +45,15 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
 
       <section className="search-filter">
         <div className="search">
-          <input type="text" 
-            placeholder="Search for videos, tags, folders"
+          <input type="text" placeholder="Search here..." />
+          <Image
+            src="/assets/icons/search.svg"
+            alt="search"
+            width={16}
+            height={16}
           />
-          <Image src="/assets/icons/search.svg" alt="search" width={16} height={16} />
         </div>
+
         <DropdownList />
       </section>
     </header>

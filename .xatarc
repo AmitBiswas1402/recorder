@@ -1,6 +1,0 @@
-{
-  "databaseURL": "https://Amit-Biswas-s-workspace-butaqg.ap-southeast-2.xata.sh/db/recorder",
-  "codegen": {
-    "output": "src/xata.ts"
-  }
-}
