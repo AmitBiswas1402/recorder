@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import "./globals.css";
 import { satoshi } from "../fonts/font";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const geistKarla = Karla({
   variable: "--font-geist-karla",
@@ -23,14 +22,12 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={`${geistKarla.variable} ${satoshi.variable} font-karla antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistKarla.variable} ${satoshi.variable} font-karla antialiased`}
+      >
+        {children}
+      </body>
+    </html>
   );
 }
