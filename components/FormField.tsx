@@ -8,9 +8,10 @@ const FormField = ({
   as = "input",
   options = [],
 }: FormFieldProps) => {
-  const InputToRender = ({ type }: { type: string }) => {
-    if (type === "textarea") {
-      return (
+  return (
+    <div className="form-field">
+      <label htmlFor={id}>{label}</label>
+      {as === "textarea" ? (
         <textarea
           id={id}
           name={id}
@@ -18,35 +19,26 @@ const FormField = ({
           onChange={onChange}
           placeholder={placeholder}
         />
-      );
-    } else if (type === "select") {
-      return (
+      ) : as === "select" ? (
         <select id={id} name={id} value={value} onChange={onChange}>
-          {options.map(({ label, value }) => (
-            <option key={label} value={value}>
-              {label}
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
             </option>
           ))}
         </select>
-      );
-    } else {
-      return (
+      ) : (
         <input
+          type={type}
           id={id}
           name={id}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
         />
-      );
-    }
-  };
-
-  return (
-    <div className="form-field">
-      <label htmlFor={id}>{label}</label>
-      <InputToRender type={as} />
+      )}
     </div>
   );
 };
+
 export default FormField;
