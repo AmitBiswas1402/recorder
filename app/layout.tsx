@@ -6,6 +6,8 @@ import { satoshi } from "../fonts/font";
 const geistKarla = Karla({
   variable: "--font-geist-karla",
   subsets: ["latin"],
+  display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
